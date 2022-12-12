@@ -1,0 +1,55 @@
+.mainContainer{
+    margin-top: 110px;
+    width:70%;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    text-align: left;
+    border: 2px solid black;
+    border-radius: 5px;
+    
+}
+.header{
+    width: 100%;
+    min-height: 50px;
+    font-size: 25px;
+    line-height: 2;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding:0 30px;
+}
+.intro {
+    padding: 10px 20px;
+}
+.sub_title{
+    font-size: 30px;
+    padding: 10px 0;
+}
+.skills{
+    padding: 10px 20px;
+}
+
+.experience
+{   padding: 10px 20px;
+    margin-top: 10px;
+    overflow-x: auto;
+}
+.experience_table th{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1deea2;
+    height: 25px;
+}
+.projects{
+    padding: 10px 20px;
+}
+.experience_table tr:nth-child(even){background-color: #f2f2f2;}
+
+.experience_table tr:hover {background-color: #ddd;}
+
+@media screen and (max-width:700px) {
+    .header{
+        flex-direction: column;
+    }
+}

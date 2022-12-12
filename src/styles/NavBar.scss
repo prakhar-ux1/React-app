@@ -1,0 +1,67 @@
+.navigationBar {
+    position: fixed;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    margin: 0 10px 0 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2000;
+}
+
+.heading {
+    font-size: 40px;
+    margin-left: 10px;
+
+}
+
+.menu {
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    line-height: 5;
+}
+
+.Hamburger_menu {
+    display: none;
+}
+
+.menu_list {
+    width: 200px;
+}
+
+.menu a {
+    width: 100px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #f2f2f2;
+}
+
+
+
+a:hover,
+a::after {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+@media screen and (max-width:750px) {
+    .menu {
+        display: none;
+    }
+
+    .Hamburger_menu {
+        display: block;
+        height: 100%;
+        font-size: 20px;
+        line-height: 2;
+        padding: 20px;
+    }
+
+}
