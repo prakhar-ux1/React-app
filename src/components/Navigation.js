@@ -62,7 +62,7 @@ function Navigation(props) {
             <div className='Hamburger_menu' onClick={() => { setOpen(true) }}>
                 <i className="fa fa-bars" aria-hidden="true"></i>
             </div>
-            <Drawer open={isOpen} anchor="right" onClose={handle_button(false)}>
+            <Drawer open={isOpen} anchor="left" onClose={handle_button(false)}>
                 <Box role="presentation" onClick={handle_button(false)}
                     onKeyDown={handle_button(false)} >
                     <List>

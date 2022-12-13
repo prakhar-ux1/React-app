@@ -8,7 +8,7 @@ import Loader from '../Loader/Loader';
 import '../../styles/Card.scss';
 import CardItem from './CardItem'
 function Cards() {
-    const sas = useSelector(state => state.card.cardList);
+    const cardList = useSelector(state => state.card.cardList);
     let cardResponse;
     const [dataList, setSortList] = useState([]);
     const [isOpenedModal, setOpenedModal] = useState(false);
@@ -55,8 +55,8 @@ function Cards() {
     }, [dataList])
 
     useEffect(() => {
-        setSortList(sas);
-    }, [sas])
+        setSortList(cardList);
+    }, [cardList])
 
     const deleteItem = (index) => {
         //delete that item
@@ -66,7 +66,7 @@ function Cards() {
     }
     const handleSearch = (e) => {
         setValue(e.target.value);
-        let temp = [...sas];
+        let temp = [...cardList];
         let match = temp.filter((element) => {
             return element.title.toLowerCase().startsWith(e.target.value.toLowerCase())
         })

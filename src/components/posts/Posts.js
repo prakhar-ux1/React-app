@@ -5,6 +5,7 @@ import actions from '../../services/actions/index';
 import { useSelector, useDispatch } from 'react-redux';
 import { getPostListAPI } from "../../redux/postSlice"
 import Pagination from "../Pagination"
+import Loader from '../Loader/Loader.js';
 function Posts() {
     let pageSize = 5;
     const [isLoading, setLoading] = useState(false);
@@ -18,6 +19,7 @@ function Posts() {
                 postResponse = await actions.getPostList();
                 // call action to store data from api
                 dispatch(getPostListAPI(postResponse.data));
+                setLoading(false);
             }
 
         )();
@@ -32,20 +34,25 @@ function Posts() {
     }, [currentPage, postListState]);
 
     return (
-        <div className='postLists'>
+        <>
+            {
+                (isLoading && currentTableData.length !== 0) ? <Loader /> : (<><div className='postLists'>
+                    {
+                        currentTableData.map((element) => {
+                            return (<PostListItem id={element.id} key={element.id} title={element.title} body={element.body} />)
+                        })
+                    }
+                </div>
+                    <Pagination
+                        className="pagination-bar"
+                        currentPage={currentPage}
+                        totalCount={postListState.length}
+                        pageSize={pageSize}
+                        onPageChange={page => setCurrentPage(page)}
+                    /></>)
+            }
 
-            {currentTableData.map((element) => {
-                return (<PostListItem id={element.id} key={element.id}
-                    title={element.title} body={element.body} />)
-            })}
-            <Pagination
-                className="pagination-bar"
-                currentPage={currentPage}
-                totalCount={postListState.length}
-                pageSize={pageSize}
-                onPageChange={page => setCurrentPage(page)}
-            />
-        </div>
+        </>
     )
 }
 

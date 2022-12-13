@@ -1,107 +1,114 @@
 import React from 'react'
 import "../styles/About.scss"
+function SkillItem({ data }) {
+    return (<span className='skill_item'>{data}</span>)
+}
 function About() {
-
-    const companies = [{
-        name: 'Tektronix(merged with Telestream)Under a Fortune 500 company: Fortive',
-        jobTitle: 'UI/UX Developer',
-        responisbilities: `Develop UI of embedded App which runs on touch panel Instrument, Browser & Monitor. 
-        Features, Bug fixes, Wireframes, UI improvements, pull requests approvals`,
-        duration: 'June 2019- Present'
-
-    }, {
-        name: 'Wishbook Info services Pvt Ltd',
-        jobTitle: 'Frontend developer',
-        responisbilities: `Develop UI of embedded App which runs on touch panel Instrument, Browser & Monitor. 
-        Features, Bug fixes, Wireframes, UI improvements, pull requests approvals`,
-        duration: 'May 2018 to June 2019'
-
-    }, {
-        name: 'Infosys Limited',
-        jobTitle: 'System Engineer',
-        responisbilities: `Training on Python & JavaScript, Assignments, Test.`,
-        duration: 'Dec 2017 to January 2018'
-    }]
+    const skills = ["Html", "Css", "Javascript", "React", "C++", "Data Structure", "DBMS", "MySql", "Java", "Machine Learning", "Python", "Data analysis"]
     return (
         <div className='mainContainer'>
             <div className='header'>
-                <span className='owner_name'>Prakhar</span>
-                <span>Linkden:prakhar123121.com</span>
+                <span className='owner_name'>Prakhar Gupta</span>
+                <span>Software Engineer</span>
             </div>
             <div className='intro'>
                 <h3 className=' sub_title intro_heading'>Brief Intro</h3>
                 <p >
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt distinctio, laboriosam eius expedita similique modi non eaque explicabo iste. Suscipit doloremque officia reiciendis eveniet magnam ipsum ipsam eaque assumenda tempora, odit impedit optio, eos a! Harum temporibus autem amet nemo est quisquam, soluta modi id! Doloribus est quidem explicabo quia!
+                    Keen learner to solve technical issues by debugging programs and tasks. Enthusiastic developer for ML, Hardworking and effective, looking to excel with an organization to solve real world problems.
                 </p>
+            </div>
+            <div className='contactDetail'>
+                <ul className='contactDetail_list'>
+                    <li>
+                        <i className="fa fa-envelope" aria-hidden="true"></i> prakharg689@gmail.com
+                    </li>
+                    <li>
+                        <i className="fa fa-map-marker" aria-hidden="true"></i> Jhansi
+                    </li>
+                    <li>
+                        <i className="fa fa-github" aria-hidden="true"></i> github.com/prakhar-ux1
+                    </li>
+                    <li>
+                        <i className="fa fa-mobile" aria-hidden="true"></i> 1234567890
+                    </li>
+                    <li>
+                        <i className="fa fa-linkedin" aria-hidden="true"></i> <span>linkedin.com/in/prakhargupta770</span>
+                    </li>
+                </ul>
+
             </div>
             <div className='experience'>
                 <h3 className='sub_title'>Professional Experience</h3>
                 <table className='experience_table'>
-                    <tbody>
+
+                    <thead>
                         <tr id="heading">
                             <th>Company Name </th>
                             <th>Designation </th>
                             <th>Responsibilities</th>
                             <th>Duration</th>
                         </tr>
-                        {companies.map((company, i) => (
-                            <tr key={i}>
-                                <td>{company.name} </td>
-                                <td>{company.jobTitle} </td>
-                                <td>{company.responisbilities}</td>
-                                <td>{company.duration}</td>
-                            </tr>
-                        ))}
+                    </thead>
+                    <tbody>
+                        <tr key={1}>
+                            <td>Siemens Technology</td>
+                            <td>Software Developer Intern </td>
+                            <td>Test migration from Image Based to Model Based</td>
+                            <td>01/2021 - 06/2021,</td>
+                        </tr>
+                        <tr key={2}>
+                            <td>Byjus</td>
+                            <td>Software Developer </td>
+                            <td>quality Assurance and Frontend developer</td>
+                            <td>08/2022-Current</td>
+                        </tr>
+                        <tr key={3}>
+                            <td>Siemens Technology</td>
+                            <td>Software Developer Intern </td>
+                            <td>Test migration from Image Based to Model Based</td>
+                            <td>01/2021 - 06/2021,</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
             <div className='skills'>
-                <h3 className='sub_title'>Technical Skills</h3>
-                <div>
-                    <ul>
-                        <li>
-                            <span className="course-name">FrontEnd :</span>
-                            JavaScript, React Js, Redux,
-                        </li>
-                        <li>
-                            <span className="course-name">Backend :</span> Asp.net with c#, J2EE,
-
-                        </li>
-                        <li>
-                            <span className="course-name">Database:</span> : sql, MySQL
-                        </li>
-                        <li>
-                            <span className="course-name">Language-</span>  c,c++, Python
-                        </li>
-                    </ul>
+                <h3 className='sub_title'>Skills</h3>
+                <div className='skills_list'>
+                    {
+                        skills.map((element) => {
+                            return (<span className='skill_item'>{element}</span>);
+                        })
+                    }
                 </div>
             </div>
             <div className='projects'>
                 <h3 className='sub_title'>Projects</h3>
-                <div>
+                <div className='projects_list'>
                     <ul>
                         <li>
-                            <span className="course-name">PRISM waveform monitor</span><br />
-                            media monitoring & analysis platform(H/W+S/W) for live SDI, IP signals used by video engineers while production, edit & broadcast
+                            <div className="project_name">QUAKE REPORT ANDROID APP</div>
+                            <span>- Fetching data from USGS server about earthquake happened recently</span>
                         </li>
                         <li>
-                            <span className="course-name">Wishbook Wholesale App</span><br />
-                            is an online Indian marketplace where textile Manufacturers and Wholesalers sell their products,
-                            while Resellers and Retailers purchase them.iOS App & Mobile browser app (Cordova+onsen+AngularJS)
+                            <div className="project_name">Book Search APP</div>
+                            <span>- A book search app with review system where you can type a key, based on your key All books are represented in recycler view in an app where u
+                                view its price, review, author, publisher etc... I am using google book API
+                                to get data from server using http connection code using java Expense Tracker APP</span>
                         </li>
                         <li>
-                            <span className="course-name">Wishbook Seller/admin panel </span><br />
-                            (web Application: AngularJS, AngularDatatablesv0.6x)
+                            <div className="project_name">Expense Tracker App</div>
+                            <span>- A Simple expense tracker implemented using Room persistence library (database Design)</span>
                         </li>
                         <li>
-                            <span className="course-name">Character Recognizer using KNN </span><br />
-                            (python-Window Apppublished paper in IEEE Bangkok Conference 2017 - my work with name on Google search )
+                            <div className="project_name">DIGITAL IMAGE PROCCESING</div>
+                            <span>- Build a model which detect digits from images and use these digits to
+                                perform arithmetic operation.</span>
                         </li>
                     </ul>
                 </div>
             </div>
 
-        </div>
+        </div >
     )
 }
 

@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 2000;
+    z-index: 1100;
 }
 
 .heading {
@@ -52,6 +52,9 @@ a::after {
 }
 
 @media screen and (max-width:750px) {
+    .navigationBar{
+        flex-direction: row-reverse;
+    }
     .menu {
         display: none;
     }

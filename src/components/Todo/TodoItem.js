@@ -5,11 +5,10 @@ import '../../styles/TodoItem.scss';
 function TodoItem(props) {
     const [isCompleted, setCompleted] = useState(props.data.completed);
     const toogleDone = () => {
-        props.changeStatus(props.index)
+        props.changeStatus(props.data.id)
         setCompleted(!isCompleted);
 
     }
-
 
     return (
         <div className='todo_card'>
@@ -24,7 +23,7 @@ function TodoItem(props) {
                             <i className="fa fa-check" aria-hidden="true"></i> Done</button>
 
                     )}
-                <button className='options_butn butn_delete' onClick={() => { props.removeItem(props.index) }}>
+                <button className='options_butn butn_delete' onClick={() => { props.removeItem(props.data.id) }}>
                     <i className="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
             </div>
         </div>
