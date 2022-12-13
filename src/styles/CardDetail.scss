@@ -1,0 +1,42 @@
+.cardItem_Container{
+    margin-top:140px;
+    border-radius: 8px;
+    border: 3px solid black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    align-items: stretch;
+    justify-content: space-between;
+}
+.cardItem_Heading{
+    padding: 10px 0;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+
+}
+.image{
+    margin-top: 20px;
+}
+.cardItem_Title{
+    font: size 25px;
+    padding:40px 25px;
+    text-align: center;
+    color: chocolate;
+}
+.cardItem_Detail{
+    margin-bottom: 30px;
+    padding:0 20px
+}
+@media screen and (min-width:600px) {
+    .cardItem_Container{
+        width: 60%;
+    }
+}
+@media screen and (min-width:1000px) {
+    .cardItem_Container{
+        width: 40%;
+    }
+}

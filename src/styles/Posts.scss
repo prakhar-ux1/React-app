@@ -1,0 +1,22 @@
+.postLists {
+    margin-top: 80px;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+
+}
+
+.pagination-bar {
+    background-color: white;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}

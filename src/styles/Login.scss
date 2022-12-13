@@ -1,0 +1,35 @@
+.loginContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0);
+}
+.loginContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.icon{
+    font-size: 250px;
+    color: white;
+}
+.title{
+    padding: 30px;
+    font-size: 50px;
+    color: white;
+}
+.loginButton{
+    width: 200px;
+    padding: 20px;
+    font-size: 20px;
+    background-color: #4d58ec;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}

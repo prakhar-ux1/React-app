@@ -1,0 +1,52 @@
+.wrapped {
+    display: flex;
+    flex-direction: column;
+}
+.hr_delete{
+    margin-bottom: 40px;
+}
+.updateForm {
+    width: 100%;
+    align-self: flex-start;
+    padding: 15px 0;
+}
+.card_input, .card_input:focus, textarea:focus, select:focus {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-width: 0;
+    box-shadow: none;
+    border-bottom: 2px solid rgb(128, 50, 50);
+}
+.item_detail {
+    padding-bottom: 5px;
+    padding-top: 20px;
+}
+
+.item_update_btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.item_modify {
+    align-self: center;
+}
+
+
+.butn {
+    width: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    background-color: #51b081;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+.butn_delete{
+    background-color: rgb(227, 68, 68);
+}

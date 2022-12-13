@@ -1,0 +1,159 @@
+.mainContainer{
+    margin-top: 110px;
+    margin-bottom: 20px;
+    width:70%;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    text-align: left;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.header{
+    width: 100%;
+    min-height: 55px;
+    font-size: 15px;
+    line-height: 2;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(15, 28, 64);
+    color: white;
+    align-items: flex-end;
+    padding:0 30px;
+}
+.owner_name{
+    font-size: 25px;
+}
+ul {
+    list-style-type: none;
+}
+.contactDetail{
+    border-top: 2px solid rgb(15, 28, 64);
+    border-bottom: 2px solid rgb(15, 28, 64);
+    height: 145px;
+}
+.contactDetail_list{
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+align-items: center;
+height: 100%;
+align-content: space-between;
+}
+.contactDetail_list{
+    li{ 
+        align-self:flex-start;
+        width: fit-content;
+        padding: 13px 30px;
+    }
+}
+.skills_list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.skill_item{
+    background-color: rgb(15, 28, 64);
+    color: white;
+    font-size: 15px;
+    border-radius:6px;
+    padding: 4px 8px;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+.project_name{
+  padding-top:16px;
+  padding-bottom: 6px;
+  font-weight: 600;
+}
+.experience_table{
+    width:100%;   
+}
+tr{
+    padding:10px;
+}
+ 
+
+.intro {
+    padding: 10px 20px;
+}
+.sub_title{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+.skills{
+    padding: 10px 20px;
+}
+
+.experience
+{   padding: 10px 20px;
+    margin-top: 10px;
+    overflow-x: auto;
+}
+.experience_table th{
+    background-color: rgb(15, 28, 64);
+    color: white;
+    height: 25px;
+}
+.projects{
+    padding: 10px 20px;
+}
+.experience_table tr:nth-child(even){background-color: #f2f2f2;}
+
+.experience_table tr:hover {background-color: #ddd;}
+
+@media screen and (max-width:810px) {
+   .contactDetail{
+    height: fit-content;
+    word-break: break-all;
+   }
+
+}
+@media  screen and (max-width:700px) {
+    table, thead, tbody, th, td, tr { 
+		display: block; 
+        font-size: 12px;
+	}
+    thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+    td {
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+    td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+        background-color: rgb(15, 28, 64);
+        color: white;
+        height: 100%;
+		left: 6px;
+		width: 45%; 
+		white-space: nowrap;
+	}
+    td:nth-of-type(1):before { content: "Company Name"; }
+	td:nth-of-type(2):before { content: "Designation"; }
+	td:nth-of-type(3):before { content: "Responsibilities"; }
+	td:nth-of-type(4):before { content: "Duration"; }
+    
+}
+@media screen and (max-width:550px) {
+    .header{
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+    
+}
+.btn_pdf{
+    background-color: rgb(5, 111, 34);
+    color: white;
+    padding: 10px 10px;
+    border: none;
+}

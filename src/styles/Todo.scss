@@ -1,0 +1,48 @@
+.todo {
+    width: 80%;
+    margin-top: 110px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(228, 192, 245);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    justify-content: space-evenly;
+    align-items: stretch;
+
+}
+.input,
+.input:focus,
+textarea:focus,
+select:focus {
+    font-size: 25px;
+    padding-left: 10px;
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-width: 0;
+    box-shadow: none;
+    border-radius: 5px;
+    border-bottom: 2px solid rgb(128, 50, 50);
+
+}
+
+.todoInputForm {
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    align-self: center;
+}
+
+@media screen and (min-width:600px) {
+    .todo {
+        width: 70%
+    }
+}
+
+@media screen and (min-width:900px) {
+    .todo {
+        width: 60%
+    }
+}
