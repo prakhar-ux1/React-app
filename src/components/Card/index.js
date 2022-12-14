@@ -4,7 +4,7 @@ import actions from '../../services/actions/index';
 import { getCardListAPI, removeItem, sortByAsc, sortByDesc, modifyItem, addItem, sortById } from "../../redux/cardSlice"
 import Modal from '../Modal';
 import CardItemModify from './CardItemModify';
-import Loader from '../Loader/Loader';
+import Loader from '../Loader';
 import '../../styles/Card.scss';
 import CardItem from './CardItem'
 function Cards() {

@@ -5,7 +5,7 @@ import actions from '../../services/actions/index';
 import { useSelector, useDispatch } from 'react-redux';
 import { getPostListAPI } from "../../redux/postSlice"
 import Pagination from "../Pagination"
-import Loader from '../Loader/Loader.js';
+import Loader from '../Loader/index.js';
 function Posts() {
     let pageSize = 5;
     const [isLoading, setLoading] = useState(false);

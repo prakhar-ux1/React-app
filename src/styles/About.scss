@@ -48,6 +48,51 @@ align-content: space-between;
         padding: 13px 30px;
     }
 }
+.projects_list{
+    li{
+        padding-bottom: 16px;
+    }
+}
+.project_name{
+  padding-bottom: 6px;
+  font-weight: 600;
+}
+.experience_table{
+    width:100%;   
+}
+tr{
+    padding:10px;
+}
+.sub_title{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+.experience
+{
+    margin-top: 10px;
+    overflow-x: auto;
+}
+.experience_table th{
+    background-color: rgb(15, 28, 64);
+    color: white;
+    height: 25px;
+}
+.section{
+    padding: 10px 20px;
+}
+.split_section{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.experience_table tr:nth-child(even){background-color: #f2f2f2;}
+
+.experience_table tr:hover {background-color: #ddd;}
+
+.skills{
+    width:100%
+}
 .skills_list{
     display: flex;
     flex-wrap: wrap;
@@ -62,47 +107,27 @@ align-content: space-between;
     margin-right: 10px;
     margin-bottom: 5px;
 }
-.project_name{
-  padding-top:16px;
-  padding-bottom: 6px;
-  font-weight: 600;
+.education{
+    width:100%
 }
-.experience_table{
-    width:100%;   
+.education_name{
+    color: rgb(15, 28, 64) ;
+    font-weight: 700;
 }
-tr{
-    padding:10px;
+.education_list{
+    li{
+        padding-bottom: 10px;
+    }
 }
- 
-
-.intro {
-    padding: 10px 20px;
+.eduction_duration_score{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color:rgb(131,132,131);
+    font-style: italic;
+    font-size: 12px;
 }
-.sub_title{
-    font-size: 30px;
-    padding-bottom: 10px;
-}
-.skills{
-    padding: 10px 20px;
-}
-
-.experience
-{   padding: 10px 20px;
-    margin-top: 10px;
-    overflow-x: auto;
-}
-.experience_table th{
-    background-color: rgb(15, 28, 64);
-    color: white;
-    height: 25px;
-}
-.projects{
-    padding: 10px 20px;
-}
-.experience_table tr:nth-child(even){background-color: #f2f2f2;}
-
-.experience_table tr:hover {background-color: #ddd;}
-
 @media screen and (max-width:810px) {
    .contactDetail{
     height: fit-content;
@@ -110,7 +135,10 @@ tr{
    }
 
 }
-@media  screen and (max-width:700px) {
+@media  screen and (max-width:680px) {
+    .split_section{
+        flex-direction: column;
+    }
     table, thead, tbody, th, td, tr { 
 		display: block; 
         font-size: 12px;
@@ -146,8 +174,7 @@ tr{
 @media screen and (max-width:550px) {
     .header{
         flex-direction: column;
-        align-items: flex-start;
-        
+        align-items: flex-start;    
     }
     
 }

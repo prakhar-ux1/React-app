@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Loader from '../Loader/Loader';
+import Loader from '../Loader';
 import "../../styles/CardDetail.scss"
 import { useLocation } from 'react-router-dom';
 function CardDetail(props) {

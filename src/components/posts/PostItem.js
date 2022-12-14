@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import "../../styles/PostItem.scss";
 import actions from '../../services/actions';
-import Loader from '../Loader/Loader';
+import Loader from '../Loader';
 function PostItem(props) {
     const { post_id } = useParams();
     const [isLoading, setLoading] = useState(false);

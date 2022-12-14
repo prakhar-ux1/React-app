@@ -1,9 +1,9 @@
 import './App.css';
 import Navigation from './components/Navigation';
-import Todo from './components/Todo/Todo';
+import Todo from './components/Todo';
 import { Route, BrowserRouter, Routes } from 'react-router-dom'
-import Posts from './components/posts/Posts';
-import Cards from './components/Card/Cards';
+import Posts from './components/posts';
+import Cards from './components/Card/';
 import PostItem from './components/posts/PostItem';
 import Login from './components/Login';
 import About from './components/About'
