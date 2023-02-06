@@ -4,7 +4,7 @@ import actions from '../../services/actions/index';
 import { getCardListAPI, removeItem, sortByAsc, sortByDesc, modifyItem, addItem, sortById } from "../../redux/cardSlice"
 import Modal from '../Modal';
 import CardItemModify from './CardItemModify';
-import Loader from '../Loader/Loader';
+import Loader from '../Loader';
 import '../../styles/Card.scss';
 import CardItem from './CardItem'
 function Cards() {
@@ -121,16 +121,20 @@ function Cards() {
                 </form>
             </div>
             <div className='cards_Container'>
-                <div clasName='emptyList' style={{ 'display': `${!isEmpty ? "none" : "block"}` }}
-                ><span>No Card is present</span></div>
-                {isLoading ? (<Loader />) :
-                    (dataList.map((element) => {
-                        return (<CardItem key={element.id}
-                            index={element.id}
-                            data={element}
-                            deleteItem={deleteItem}
-                            updateItem={updateItem} />);
-                    }))
+
+                {isLoading ? (<Loader />)
+                    : isEmpty
+                        ? (<div clasName='emptyList' style={{ 'display': `${!isEmpty ? "none" : "block"}` }}>
+                            <span>No Card is present</span>
+                        </div>
+                        )
+                        : (dataList.map((element) => {
+                            return (<CardItem key={element.id}
+                                index={element.id}
+                                data={element}
+                                deleteItem={deleteItem}
+                                updateItem={updateItem} />);
+                        }))
                 }
             </div>
             <i class="fa fa-plus bottom_right" onClick={() => setOpenedModal(true)} aria-hidden="true"></i>

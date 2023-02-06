@@ -6,7 +6,7 @@ import actions from '../../services/actions/index'
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { getTodoListAPI, addItem, removeItem, changeItemStatus } from "../../redux/todoSlice"
-import Loader from '../Loader/Loader';
+import Loader from '../Loader';
 
 function Todo() {
     const dispatch = useDispatch();

@@ -53,7 +53,7 @@ function About() {
                     <span className='owner_name'>Prakhar Gupta</span>
                     <span>Software Engineer</span>
                 </div>
-                <div className='intro'>
+                <div className='intro section'>
                     <h3 className=' sub_title intro_heading'>Brief Intro</h3>
                     <p >
                         Keen learner to solve technical issues by debugging programs and tasks. Enthusiastic developer for ML, Hardworking and effective, looking to excel with an organization to solve real world problems.
@@ -79,7 +79,53 @@ function About() {
                     </ul>
 
                 </div>
-                <div className='experience'>
+                <div className='split_section'>
+                    <div className='education section'>
+                        <h3 className='sub_title'>Education</h3>
+                        <div className='education_list'>
+                            <ul>
+                                <li>
+                                    <div className="education_name">B.Tech</div>
+                                    <div className='education_pace'>NIT Kurukshetra</div>
+                                    <div className='eduction_duration_score'>
+                                        <div className='education_duration'>07/2018 - 06/2022</div>
+                                        <div className='education_score'>8.9</div>
+                                    </div>
+                                    <span>- Electronics and Communication Engineering</span>
+                                </li>
+                                <li>
+                                    <div className="education_name">Senior Secondary</div>
+                                    <div className='education_pace'>Jai Academy (CBSE)</div>
+                                    <div className='eduction_duration_score'>
+                                        <div className='education_duration'>04/2016 - 04/2017</div>
+                                        <div className='education_score'>88%</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="education_name">High Schol</div>
+                                    <div className='education_pace'>Jai Academy (CBSE)</div>
+                                    <div className='eduction_duration_score'>
+                                        <div className='education_duration'>04/2014 - 04/2015</div>
+                                        <div className='education_score'>8.8</div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div className='skills section'>
+                        <h3 className='sub_title'>Skills</h3>
+                        <div className='skills_list'>
+                            {
+                                skills.map((element) => {
+                                    return (<span className='skill_item'>{element}</span>);
+                                })
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <div className='experience section'>
                     <h3 className='sub_title'>Professional Experience</h3>
                     <table className='experience_table'>
 
@@ -113,17 +159,7 @@ function About() {
                         </tbody>
                     </table>
                 </div>
-                <div className='skills'>
-                    <h3 className='sub_title'>Skills</h3>
-                    <div className='skills_list'>
-                        {
-                            skills.map((element) => {
-                                return (<span className='skill_item'>{element}</span>);
-                            })
-                        }
-                    </div>
-                </div>
-                <div className='projects'>
+                <div className='projects section'>
                     <h3 className='sub_title'>Projects</h3>
                     <div className='projects_list'>
                         <ul>
@@ -149,6 +185,7 @@ function About() {
                         </ul>
                     </div>
                 </div>
+
             </div >
             <button className='btn_pdf' onClick={handlepdf}>Generate PDF</button>
         </>
