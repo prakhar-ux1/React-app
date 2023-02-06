@@ -57,7 +57,8 @@ function Navigation(props) {
                 <Link to="/cards">Cards</Link>
                 <Link to="/posts" >Posts</Link>
                 <Link to="/about" >About me</Link>
-                <Link on onClick={() => logout({ returnTo: window.location.origin })}>Logout</Link>
+                <Link to="/" onClick={() => logout()}
+                >Logout</Link>
             </div>
             <div className='Hamburger_menu' onClick={() => { setOpen(true) }}>
                 <i className="fa fa-bars" aria-hidden="true"></i>
